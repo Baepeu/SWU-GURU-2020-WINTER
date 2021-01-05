@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BFBC54C4292720A9E28DF97 /* Pods_LottoDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CAD258FFA686EE354E7145 /* Pods_LottoDraw.framework */; };
+		2372377625A1C76F00EF0095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2372377525A1C76F00EF0095 /* AppDelegate.swift */; };
+		2372377825A1C76F00EF0095 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2372377725A1C76F00EF0095 /* SceneDelegate.swift */; };
+		2372377A25A1C76F00EF0095 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2372377925A1C76F00EF0095 /* ViewController.swift */; };
+		2372377D25A1C76F00EF0095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2372377B25A1C76F00EF0095 /* Main.storyboard */; };
+		2372377F25A1C77000EF0095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2372377E25A1C77000EF0095 /* Assets.xcassets */; };
+		2372378225A1C77000EF0095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2372378025A1C77000EF0095 /* LaunchScreen.storyboard */; };
+		2372378E25A1CD4F00EF0095 /* LottoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2372378D25A1CD4F00EF0095 /* LottoCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2372377225A1C76F00EF0095 /* LottoDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LottoDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2372377525A1C76F00EF0095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2372377725A1C76F00EF0095 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2372377925A1C76F00EF0095 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2372377C25A1C76F00EF0095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2372377E25A1C77000EF0095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2372378125A1C77000EF0095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2372378325A1C77000EF0095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2372378D25A1CD4F00EF0095 /* LottoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoCell.swift; sourceTree = "<group>"; };
+		5749D883772C8342FECA4F14 /* Pods-LottoDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoDraw.debug.xcconfig"; path = "Target Support Files/Pods-LottoDraw/Pods-LottoDraw.debug.xcconfig"; sourceTree = "<group>"; };
+		5D445C91B1A6EB2A5B99AEA7 /* Pods-LottoDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LottoDraw.release.xcconfig"; path = "Target Support Files/Pods-LottoDraw/Pods-LottoDraw.release.xcconfig"; sourceTree = "<group>"; };
+		C5CAD258FFA686EE354E7145 /* Pods_LottoDraw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LottoDraw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2372376F25A1C76F00EF0095 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BFBC54C4292720A9E28DF97 /* Pods_LottoDraw.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2372376925A1C76F00EF0095 = {
+			isa = PBXGroup;
+			children = (
+				2372377425A1C76F00EF0095 /* LottoDraw */,
+				2372377325A1C76F00EF0095 /* Products */,
+				E4891C961936DDA3B80ACEE2 /* Pods */,
+				EFCABE3304C0CA1CBCC88A03 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2372377325A1C76F00EF0095 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2372377225A1C76F00EF0095 /* LottoDraw.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2372377425A1C76F00EF0095 /* LottoDraw */ = {
+			isa = PBXGroup;
+			children = (
+				2372377525A1C76F00EF0095 /* AppDelegate.swift */,
+				2372377725A1C76F00EF0095 /* SceneDelegate.swift */,
+				2372377925A1C76F00EF0095 /* ViewController.swift */,
+				2372377B25A1C76F00EF0095 /* Main.storyboard */,
+				2372377E25A1C77000EF0095 /* Assets.xcassets */,
+				2372378025A1C77000EF0095 /* LaunchScreen.storyboard */,
+				2372378325A1C77000EF0095 /* Info.plist */,
+				2372378D25A1CD4F00EF0095 /* LottoCell.swift */,
+			);
+			path = LottoDraw;
+			sourceTree = "<group>";
+		};
+		E4891C961936DDA3B80ACEE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5749D883772C8342FECA4F14 /* Pods-LottoDraw.debug.xcconfig */,
+				5D445C91B1A6EB2A5B99AEA7 /* Pods-LottoDraw.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EFCABE3304C0CA1CBCC88A03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5CAD258FFA686EE354E7145 /* Pods_LottoDraw.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2372377125A1C76F00EF0095 /* LottoDraw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2372378625A1C77000EF0095 /* Build configuration list for PBXNativeTarget "LottoDraw" */;
+			buildPhases = (
+				FFC6F7C2A6EFEFB4218528C8 /* [CP] Check Pods Manifest.lock */,
+				2372376E25A1C76F00EF0095 /* Sources */,
+				2372376F25A1C76F00EF0095 /* Frameworks */,
+				2372377025A1C76F00EF0095 /* Resources */,
+				9240B60A3679116C87F602FD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LottoDraw;
+			productName = LottoDraw;
+			productReference = 2372377225A1C76F00EF0095 /* LottoDraw.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2372376A25A1C76F00EF0095 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					2372377125A1C76F00EF0095 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 2372376D25A1C76F00EF0095 /* Build configuration list for PBXProject "LottoDraw" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2372376925A1C76F00EF0095;
+			productRefGroup = 2372377325A1C76F00EF0095 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2372377125A1C76F00EF0095 /* LottoDraw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2372377025A1C76F00EF0095 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2372378225A1C77000EF0095 /* LaunchScreen.storyboard in Resources */,
+				2372377F25A1C77000EF0095 /* Assets.xcassets in Resources */,
+				2372377D25A1C76F00EF0095 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9240B60A3679116C87F602FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LottoDraw/Pods-LottoDraw-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LottoDraw/Pods-LottoDraw-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LottoDraw/Pods-LottoDraw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFC6F7C2A6EFEFB4218528C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LottoDraw-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2372376E25A1C76F00EF0095 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2372378E25A1CD4F00EF0095 /* LottoCell.swift in Sources */,
+				2372377A25A1C76F00EF0095 /* ViewController.swift in Sources */,
+				2372377625A1C76F00EF0095 /* AppDelegate.swift in Sources */,
+				2372377825A1C76F00EF0095 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2372377B25A1C76F00EF0095 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2372377C25A1C76F00EF0095 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2372378025A1C77000EF0095 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2372378125A1C77000EF0095 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2372378425A1C77000EF0095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2372378525A1C77000EF0095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2372378725A1C77000EF0095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5749D883772C8342FECA4F14 /* Pods-LottoDraw.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LottoDraw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = beapeu.LottoDraw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2372378825A1C77000EF0095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D445C91B1A6EB2A5B99AEA7 /* Pods-LottoDraw.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LottoDraw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = beapeu.LottoDraw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2372376D25A1C76F00EF0095 /* Build configuration list for PBXProject "LottoDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2372378425A1C77000EF0095 /* Debug */,
+				2372378525A1C77000EF0095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2372378625A1C77000EF0095 /* Build configuration list for PBXNativeTarget "LottoDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2372378725A1C77000EF0095 /* Debug */,
+				2372378825A1C77000EF0095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2372376A25A1C76F00EF0095 /* Project object */;
+}
