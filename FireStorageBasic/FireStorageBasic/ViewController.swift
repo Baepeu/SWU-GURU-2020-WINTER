@@ -4,14 +4,32 @@
 //
 //  Created by 송종근 on 2021/01/20.
 //
-
+/*
+ 1. 주제 제한이 없다.
+ 2. 파이어베이스
+    - 소셜 로그인 (애플로그인 필수- 나중에)
+    - 리얼타임 데이터베이스 (회원 정보, 기타 데이터)
+    - 파이어스토리지 (회원 사진 업로드)
+    * swiftygif, alamofireImage
+ 
+ 3. 어느정도까지 구현이 가능하냐? (주제 선정)
+ 4. MVP - 출시할 때 꼭 필요한 기능
+ 5. 구현의 깊이(퀄리티) 신경쓰지 말것
+ 
+ 
+ 
+ 
+ */
 import UIKit
 import FirebaseStorage
+import FirebaseDatabase
 import Photos
+import AVKit
 
 class ViewController: UIViewController {
     let storage = Storage.storage()
     var storageRef:StorageReference!
+    var ref: DatabaseReference!
     var imagePicker:UIImagePickerController!
     var file_name:String!
     @IBOutlet weak var imageView: UIImageView!
@@ -19,6 +37,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         storageRef = storage.reference()
+        ref = Database.database().reference()
     }
 
     // 어떤 기능을 구현하고 싶다.
@@ -97,11 +116,35 @@ class ViewController: UIViewController {
                     guard let downloadURL = url else {
                       return
                     }
+                    guard let key = self.ref.child("users/11abcd3422/images").childByAutoId().key else { return }
+                    
+                    self.ref.child("users/11abcd3422/images/\(key)").setValue(["image_url": downloadURL.absoluteString])
                     print(downloadURL, "upload complete")
                 }
             }
         }
     }
+ 
+    @IBAction func btnCamera(_ sender: UIButton) {
+        print("camera pressed")
+        switch AVCaptureDevice.authorizationStatus(for: AVMediaType.video) {
+        case .authorized:
+            imagePicker  = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            present(imagePicker, animated: true, completion: nil)
+        case .notDetermined:
+            print("결정안됨")
+            AVCaptureDevice.requestAccess(for: .video) { (granted) in
+                print(granted)
+            }
+        default:
+            print("실패")
+        }
+    }
+    
+    
+    
     
 }
 

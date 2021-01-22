@@ -6,43 +6,52 @@
 //
 
 import UIKit
-import FirebaseStorage
+import FirebaseDatabase
+import AlamofireImage
 class ImageListViewController:UIViewController {
-    let storage = Storage.storage()
-    var storageRef:StorageReference!
-    var urls:[URL] = []
+    var ref: DatabaseReference!
+    var refHandle:DatabaseHandle!
+    var imageUrls = [String]()
     
-    @IBOutlet weak var imageView: UIImageView!
-    
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        storageRef = storage.reference()
-        storageRef.child("images").listAll { (result, error) in
-            if let error = error {
-                debugPrint(error)
-                return
+        ref = Database.database().reference()
+        
+        
+        refHandle = ref.child("users/11abcd3422/images").observe(DataEventType.value, with: { (snapshot) in
+            self.imageUrls = [String]()
+            let imageDict = snapshot.value as? [String : AnyObject] ?? [:]
+            //debugPrint(imageDict)
+            for (key, value) in imageDict {
+                self.imageUrls.append(value["image_url"]!! as! String)
             }
-            self.urls = []
-            
-            for item in result.items {
-                print(item.fullPath)
-                self.storageRef.child(item.fullPath).getData(maxSize: 40 * 1024 * 1024) { (data, error) in
-                    print("got data")
-                    if let data = data {
-                        self.imageView.image = UIImage(data: data)
-                    }
-                }
-                
-//                item.downloadURL { (url, error) in
-//                    guard let url = url else {
-//                        print("url not exists")
-//                        return
-//                    }
-//                    self.urls.append(url)
-//                    debugPrint(self.urls)
-//                }
-            }
-            
-        }
+            self.collectionView.reloadData()
+            print(self.imageUrls)
+        })
+    }
+}
+
+
+extension ImageListViewController:UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.imageUrls.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCell
+        let url = URL(string: imageUrls[indexPath.row])!
+        cell.imageView.af.setImage(withURL: url)
+        return cell
+    }
+}
+
+extension ImageListViewController:UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width-20) / 3
+        return CGSize(width: width, height: width)
     }
 }
